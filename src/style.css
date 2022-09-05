@@ -1,0 +1,108 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.row {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url(../images/everest.jpg);
+}
+.container {
+  background-color: aliceblue;
+}
+
+#root {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: "solid";
+  overflow: auto;
+}
+input {
+  border-radius: 6px;
+  padding: 5px;
+}
+.btnC {
+  margin: 10px;
+  padding: 6px;
+  margin-left: 7px;
+  border-radius: 5px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.App {
+  width: 100%;
+  max-width: 800px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.Header {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(223, 231, 237);
+  text-align: center;
+  color: rgb(20, 22, 24);
+  font-size: 30px;
+  font-family: "Bebas Neue", cursive;
+}
+.Footer {
+  width: 100%;
+  background-color: rgb(223, 231, 237);
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: small;
+}
+body {
+  min-height: 100vh;
+  background-color: rgb(64, 128, 192);
+  display: flex;
+  text-align: center;
+}
+
+.form {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: "solid";
+  overflow: auto;
+}
+
+.border {
+  box-shadow: -10px 20px 40px rgb(21, 21, 21);
+  background-color: rgb(142, 186, 234);
+  border-radius: 10px;
+  border-style: hidden;
+
+  margin-left: 25%;
+  margin-right: 0%;
+  width: 300px;
+  max-width: 50%;
+  max-height: 270px;
+  height: 90px;
+  position: static;
+}
+
+.delBtn {
+  margin-left: 100px;
+}

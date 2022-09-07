@@ -1,19 +1,12 @@
 /** @format */
 
-import { getUser, promise1 } from "../firebaseConfig";
-import {
-  getAuth,
-  signInWithPopup,
-  GoogleAuthProvider,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
-import { useRef } from "react";
+import { promise1 } from "../firebaseConfig";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const { REACT_APP_API_KEY } = process.env;
 
 export function Login({
   setRegister,
-  user,
   setUser,
   setIsLogged,
   setLogin,
@@ -23,19 +16,22 @@ export function Login({
 }) {
   const auth = getAuth();
   const handleLogin = () => {
-    signInWithEmailAndPassword(auth, login.email, login.pass)
-      .then((userr) => {
-        console.log("gtom the login comp" + JSON.stringify(user));
-        setUser((pre) => ({
-          ...pre,
-          id: userr.user.uid,
-        }));
-        setIsLogged(true);
-        setRegister(false);
-      })
-      .catch((err) => {
-        alert(err);
-      });
+    if (login.email && login.pass) {
+      signInWithEmailAndPassword(auth, login.email, login.pass)
+        .then((userr) => {
+          setUser((pre) => ({
+            ...pre,
+            id: userr.user.uid,
+          }));
+          setIsLogged(true);
+          setRegister(false);
+        })
+        .catch((err) => {
+          alert(err);
+        });
+    } else {
+      alert("enter email and password");
+    }
   };
 
   const handlePass = (e) => {
@@ -68,6 +64,7 @@ export function Login({
             setLogin((pre) => ({ ...pre, email: "" }));
           }}
           value={newUser.email == "" ? login.email : newUser.email}
+          required="required"
         />
         <br></br>
         <input
@@ -75,10 +72,11 @@ export function Login({
           type={"password"}
           placeholder={"password"}
           onChange={handlePass}
+          required="required"
         />
         <br></br>
         <button
-          type={"Button"}
+          type={"submit"}
           className={"btn btn-dark"}
           onClick={handleLogin}
         >
@@ -102,7 +100,7 @@ export function Login({
           }}
           type={"button"}
         >
-          register now
+          Register Now
         </button>
       </form>
     </>

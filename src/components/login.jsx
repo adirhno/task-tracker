@@ -2,6 +2,7 @@
 
 import { promise1 } from "../firebaseConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { BsGoogle } from "react-icons/bs";
 
 const { REACT_APP_API_KEY } = process.env;
 
@@ -89,7 +90,7 @@ export function Login({
           onClick={loginWithGoogle}
         >
           Google
-          <img src="https://img.icons8.com/color/20/000000/google-logo.png" />
+          <BsGoogle style={{ marginLeft: 7, marginBottom: 4 }} />
         </button>
         <br></br>
         <button

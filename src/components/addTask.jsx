@@ -1,7 +1,7 @@
 /** @format */
 
-import { useEffect, useRef, useState } from "react";
-import { addDoc, addCollection } from "firebase/firestore";
+import { useEffect, useRef } from "react";
+import { addDoc } from "firebase/firestore";
 
 export function AddTask({
   setAddTask,

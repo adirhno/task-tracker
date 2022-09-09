@@ -1,7 +1,7 @@
 /** @format */
 import "../style.css";
 import { FaTimes } from "react-icons/fa";
-import { db, userName } from "../firebaseConfig";
+import { db } from "../firebaseConfig";
 import { doc, deleteDoc } from "firebase/firestore";
 
 export default function Task({ task, setTask, user }) {

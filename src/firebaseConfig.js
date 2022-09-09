@@ -23,15 +23,15 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 const userAuth = getAuth();
 
- const promise1 = async () => {
+const promise1 = async () => {
   await signInWithPopup(auth, provider);
 };
 
- const getUser = () => {
+const getUser = () => {
   const us = userAuth.currentUser;
   return us;
 };
 
- const db = getFirestore(app);
+const db = getFirestore(app);
 
 export { db, getUser, promise1 };

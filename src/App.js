@@ -1,5 +1,5 @@
 /** @format */
-import { db, getUser, logStatus } from "./firebaseConfig";
+import { db } from "./firebaseConfig";
 import "./style.css";
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,12 +8,7 @@ import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import { Content } from "./components/content";
 import { Login } from "./components/login";
-import {
-  onAuthStateChanged,
-  getAuth,
-  signOut,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
+import { onAuthStateChanged, getAuth, signOut } from "firebase/auth";
 import { REGISTER } from "./components/register";
 
 function App() {

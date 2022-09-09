@@ -2,11 +2,9 @@
 
 import Task from "./task";
 import "../style.css";
-import { inp2Ref } from "./addTask";
 
 export default function Form({
   children,
-  isAdd,
   user,
   setIsAdd,
   addTask,
@@ -15,7 +13,6 @@ export default function Form({
   setTask,
   isLogged,
   handleSignOut,
-  newUser,
 }) {
   const handleIssAdd = (ev) => {
     ev.preventDefault();
@@ -25,7 +22,7 @@ export default function Form({
     <>
       <form className={"form"}>
         <div style={{ marginRight: 410 }}>
-          <strong>WELCOME {!user.name?user.dName:user.name}</strong>
+          <strong>WELCOME {!user.name ? user.dName : user.name}</strong>
           <br></br>
           {isLogged ? (
             <button

@@ -1,6 +1,6 @@
 # Task Tracker App
 
-this project was build with react js, could help you to track your messions.
+this app could help you to track your messions during the day.
 
 ## Built with:
 - React.js
